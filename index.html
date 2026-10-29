@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ea">
+  <meta name="description" content="A warm World Sunday School Day greeting for our church visitors.">
+  <title>World Sunday School Day • A Blessing for You</title>
+  <style>
+    :root {
+      --ink: #274c45;
+      --green: #2f6759;
+      --leaf: #76a78a;
+      --softgreen: #e6f3dc;
+      --cream: #fffcf4;
+      --gold: #e3ad54;
+      --pink: #e88b83;
+      --sky: #e5f7f6;
+    }
+    * { box-sizing: border-box; }
+    html { background: #e8f3eb; }
+    body {
+      margin: 0;
+      font-family: 'Trebuchet MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 15% 8%, #fef9e8 0%, transparent 32%), linear-gradient(155deg, #dff3ef 4%, #fff7e9 58%, #e6f3dd 100%);
+    }
+    .page {
+      position: relative;
+      width: min(100%, 520px);
+      min-height: 100vh;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(180deg, #dff5f3 0%, #f7fcf1 40%, #fff8e9 75%, #e6f2da 100%);
+      box-shadow: 0 15px 65px #3b715335;
+      text-align: center;
+    }
+    .page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 160px 160px at 105% 16%, #fff2c966, transparent), radial-gradient(ellipse 130px 180px at -10% 68%, #f9d2bf44, transparent);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .bunting { width: 100%; height: 85px; position: relative; display: block; margin-top: -1px; }
+    .sun { position: absolute; top: 55px; left: 20px; width: 82px; height: 82px; transform: rotate(-13deg); }
+    .dove { position: absolute; top: 50px; right: 28px; width: 81px; height: 72px; transform: rotate(10deg); }
+    .little-star { position:absolute; z-index:0; font-size: 20px; color: #edbb67; }
+    .little-star.s1 { left: 22%; top: 132px; }
+    .little-star.s2 { right: 19%; top: 139px; font-size:15px; }
+    .little-star.s3 { right: 8%; top: 250px; font-size:12px; }
+    .cloud { position:absolute; background: #ffffffb5; height: 15px; width: 65px; border-radius: 20px; }
+    .cloud::before,.cloud::after { content:''; position:absolute; background:inherit; border-radius:100%; }
+    .cloud::before { width:25px; height:25px; bottom:4px; left:9px; }
+    .cloud::after { width:35px; height:35px; bottom:0; left:29px; }
+    .cloud.c1 { top: 125px; left: -30px; opacity:.65; }
+    .cloud.c2 { top: 188px; right: -33px; opacity:.6; }
+    .heading { padding: 33px 22px 0; position:relative; }
+    .heading .kicker { text-transform: uppercase; font-size: 10px; font-weight: 900; letter-spacing: .28em; color:#a36c55; margin:0 0 9px; }
+    h1 { margin: 0; line-height: 1.05; letter-spacing:-.04em; font-family: Georgia, 'Times New Roman', serif; font-weight: 900; font-size: clamp(36px, 9.5vw, 51px); color: #255c52; }
+    h1 .middle { display: block; font-family:'Trebuchet MS', Arial, sans-serif; font-size: .68em; letter-spacing:.03em; font-weight:900; color: #d67773; margin:7px 0 3px; }
+    .heading .detail { margin: 13px 0 0; color: #678477; font-size: 13px; font-weight: 700; letter-spacing:.018em; }
+    .art-line { margin: 13px auto 13px; width: 150px; height: 22px; display:block; }
+    .greeting { position:relative; margin: 0 28px; padding: 27px 20px 25px; background:#fffefa; border: 2px solid #f1dec6; border-radius: 24px; box-shadow: 0 9px 0 #d6d99d42, 0 14px 28px #567d6620; }
+    .greeting::before,.greeting::after { content: '✿'; position: absolute; color: #eca4a1; font-size: 18px; top: 17px; }
+    .greeting::before { left:16px; }
+    .greeting::after { right:16px; }
+    .greeting .intro { font-size:10px; font-weight:900; letter-spacing:.24em; text-transform:uppercase; color:#aa7b54; margin: 0 0 16px; }
+    .msg { margin:0; font-family: Georgia, 'Times New Roman', serif; color:#294f49; font-size:clamp(22px,5.4vw,29px); font-weight: 700; line-height:1.36; letter-spacing:-.025em; }
+    .msg .blessing { display:block; font-size:1.22em; margin-top: 16px; color:#ca746b; line-height:1.19; }
+    .greeting .ornament { margin:15px 0 0; color:#dcb061; font-size:17px; letter-spacing:12px; }
+    .scene { position:relative; display:block; width: calc(100% - 12px); max-width: 470px; margin: 14px auto -4px; height:auto; }
+    .bottom { position:relative; margin-top:0; padding: 8px 20px 24px; background: linear-gradient(180deg, #d6ebd0, #e8f2dc); font-size:11px; letter-spacing:.02em; font-weight:700; color:#527b68; }
+    .bottom strong { display:block; font-size:13px; letter-spacing:.015em; color:#316a59; margin-bottom:5px; }
+    .bottom .heart { color:#d78480; }
+    @media (max-width: 359px) {
+      .greeting {margin:0 19px; padding:24px 13px;}
+      .heading{padding-top:35px;}
+      .scene{margin-top:12px;}
+    }
+    @media (min-width: 521px) { .page { min-height: 890px; margin: 30px 0; border-radius: 32px; border:8px solid #fffdf8; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .sun {animation: glow 5s ease-in-out infinite alternate;}
+      .dove {animation: float 4s ease-in-out infinite alternate;}
+      @keyframes glow {to {transform:rotate(0deg) scale(1.05)}}
+      @keyframes float {to {transform: translateY(5px) rotate(6deg)}}
+    }
+  </style>
+</head>
+<body>
+<main class="page" aria-label="World Sunday School Day greeting card">
+  <svg class="bunting" viewBox="0 0 500 89" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-5 24 Q250 78 505 22" fill="none" stroke="#8daba2" stroke-width="2"/>
+    <path d="M8 26 L29 30 17 56 Z" fill="#e89a85"/><path d="M40 36 L61 41 48 65 Z" fill="#edc37e"/>
+    <path d="M74 47 L96 51 84 72 Z" fill="#91b89f"/><path d="M108 55 L129 58 118 79 Z" fill="#a6acd4"/>
+    <path d="M141 60 L164 63 152 84 Z" fill="#e5a0aa"/><path d="M176 65 L199 67 187 87 Z" fill="#eab75d"/>
+    <path d="M210 69 L233 70 221 88 Z" fill="#8bbdbb"/><path d="M246 70 L269 70 257 88 Z" fill="#df999c"/>
+    <path d="M282 69 L305 66 295 87 Z" fill="#adc57c"/><path d="M318 64 L340 60 332 82 Z" fill="#b7a6d7"/>
+    <path d="M355 58 L376 54 369 78 Z" fill="#edc37e"/><path d="M392 51 L412 46 405 69 Z" fill="#e58e87"/>
+    <path d="M430 42 L450 37 442 62 Z" fill="#93bda7"/><path d="M469 32 L491 27 483 55 Z" fill="#b7a6d7"/>
+  </svg>
+  <svg class="sun" viewBox="0 0 100 100" role="img" aria-label="Smiling sunshine">
+    <g stroke="#efb85d" stroke-width="5" stroke-linecap="round"><path d="M50 2V13M50 87V98M2 50H13M87 50H98M16 16L24 24M76 76L84 84M16 84L24 76M76 24L84 16"/></g>
+    <circle cx="50" cy="50" r="32" fill="#ffd878"/><circle cx="39" cy="47" r="2.8" fill="#956c45"/><circle cx="62" cy="47" r="2.8" fill="#956c45"/><path d="M40 59Q50 69 61 58" stroke="#956c45" stroke-width="2.8" fill="none" stroke-linecap="round"/><circle cx="30" cy="56" r="6" fill="#faab97" opacity=".6"/><circle cx="71" cy="56" r="6" fill="#faab97" opacity=".6"/>
+  </svg>
+  <svg class="dove" viewBox="0 0 100 83" role="img" aria-label="Dove carrying an olive branch">
+    <path d="M15 48 Q6 26 16 18 Q24 13 30 30 Q41 7 60 9 Q57 27 46 38 Q72 12 91 24 Q85 47 57 55 Q44 65 27 58 L18 69 15 55 Z" fill="#fffef9" stroke="#668f8b" stroke-width="2.5" stroke-linejoin="round"/><circle cx="23" cy="41" r="2.8" fill="#3b6662"/><path d="M16 47 L4 44 L15 39" fill="#efbd68" stroke="#d5a14e" stroke-width="1"/><path d="M5 46L-1 64" stroke="#5b9d7c" stroke-width="2"/><ellipse cx="1" cy="54" rx="4" ry="8" fill="#7ca889" transform="rotate(28 1 54)"/><ellipse cx="7" cy="59" rx="4" ry="8" fill="#7ca889" transform="rotate(75 7 59)"/>
+  </svg>
+  <i class="little-star s1" aria-hidden="true">✦</i><i class="little-star s2" aria-hidden="true">✦</i><i class="little-star s3" aria-hidden="true">✧</i>
+  <span class="cloud c1" aria-hidden="true"></span><span class="cloud c2" aria-hidden="true"></span>
+  <header class="heading">
+    <p class="kicker">A day of faith · joy · love</p>
+    <h1>World <span class="middle">Sunday School</span> Day</h1>
+    <p class="detail">A little blessing, especially for you!</p>
+  </header>
+  <svg class="art-line" viewBox="0 0 150 22" aria-hidden="true"><path d="M4 11H60M90 11H146" stroke="#b0bda7" stroke-width="1.6" stroke-linecap="round"/><path d="M75 17L67 10Q61 4 67 2Q72 0 75 6Q78 0 83 2Q89 4 83 10Z" fill="#df8984"/></svg>
+  <section class="greeting" aria-label="Sunday greeting">
+    <p class="intro">We're so happy you're here</p>
+    <p class="msg">Thank you for joining us at church.<span class="blessing">Have a Blessed Sunday</span></p>
+    <p class="ornament" aria-hidden="true">✦ ♡ ✦</p>
+  </section>
+  <svg class="scene" viewBox="0 0 485 310" role="img" aria-label="Illustration of children at Sunday School reading a Bible near a little church with flowers">
+    <defs>
+      <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a6d3a4"/><stop offset="1" stop-color="#e2eec3"/></linearGradient>
+    </defs>
+    <ellipse cx="240" cy="276" rx="266" ry="68" fill="url(#hill)"/>
+    <path d="M0 290Q130 245 235 284T485 278V310H0Z" fill="#7fb694" opacity=".45"/>
+    <!-- small church -->
+    <g transform="translate(357 49)">
+      <path d="M5 97V46L44 17L84 46V97Z" fill="#fff4dc" stroke="#cfbd96" stroke-width="2.5"/>
+      <path d="M-2 46L44 10L91 46" fill="none" stroke="#be8d78" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M35 16V-2H54V22" fill="#fff4dc" stroke="#cfbd96" stroke-width="2"/>
+      <path d="M35 -1L44 -12L54 -1" fill="#bd8770"/>
+      <path d="M44 -28V-7M36 -20H53" stroke="#c49356" stroke-width="4" stroke-linecap="round"/>
+      <path d="M34 98V63Q44 50 54 63V98" fill="#ab7b62"/>
+      <path d="M15 58V44Q22 35 29 44V58Z" fill="#d0ecdf" stroke="#9ec3af" stroke-width="2"/>
+      <path d="M60 58V44Q67 35 74 44V58Z" fill="#d0ecdf" stroke="#9ec3af" stroke-width="2"/>
+      <circle cx="50" cy="82" r="2" fill="#f0db9a"/>
+    </g>
+    <!-- flower stems -->
+    <g stroke="#5a9476" stroke-width="3" stroke-linecap="round">
+      <path d="M33 284V244M83 300V260M445 291V251M404 306V280M330 295V270"/>
+      <path d="M33 266Q16 252 12 264M33 278Q44 257 53 263M83 278Q69 267 66 281M445 269Q427 253 423 270M404 289Q420 275 420 286M330 281Q341 267 350 274"/>
+    </g>
+    <g fill="#fffbef" stroke="#f9f4df" stroke-width="1">
+      <g transform="translate(33 240)"><ellipse rx="8" ry="13" cy="-9"/><ellipse rx="8" ry="13" cy="9"/><ellipse rx="13" ry="8" cx="-9"/><ellipse rx="13" ry="8" cx="9"/><circle r="7" fill="#edb65a" stroke="none"/></g>
+      <g transform="translate(445 248)"><ellipse rx="7" ry="11" cy="-8"/><ellipse rx="7" ry="11" cy="8"/><ellipse rx="11" ry="7" cx="-8"/><ellipse rx="11" ry="7" cx="8"/><circle r="6" fill="#edb65a" stroke="none"/></g>
+      <g transform="translate(83 258) scale(.75)"><ellipse rx="8" ry="13" cy="-9" fill="#f3a4a1"/><ellipse rx="8" ry="13" cy="9" fill="#f3a4a1"/><ellipse rx="13" ry="8" cx="-9" fill="#f3a4a1"/><ellipse rx="13" ry="8" cx="9" fill="#f3a4a1"/><circle r="7" fill="#ffd27b" stroke="none"/></g>
+    </g>
+    <!-- middle child: body & hair -->
+    <path d="M193 262Q202 208 242 204Q285 207 293 262" fill="#f5ba77"/>
+    <path d="M198 236Q198 199 222 185Q241 170 267 187Q286 203 286 236Z" fill="#784e40"/>
+    <ellipse cx="243" cy="216" rx="38" ry="41" fill="#d9946b"/>
+    <path d="M205 206Q204 174 234 172Q269 169 281 203Q261 193 248 186Q234 201 205 206Z" fill="#6a453d"/>
+    <path d="M228 218Q232 214 236 218M251 218Q255 214 259 218" fill="none" stroke="#62483f" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M233 233Q243 241 253 233" fill="none" stroke="#744b40" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="215" cy="228" r="6" fill="#e7a08a"/><circle cx="270" cy="228" r="6" fill="#e7a08a"/>
+    <!-- left child -->
+    <path d="M95 282Q97 226 145 224Q185 226 191 282" fill="#8fbbb1"/>
+    <path d="M104 215Q89 178 111 154Q143 129 172 158Q190 179 181 215Z" fill="#603e37"/>
+    <ellipse cx="145" cy="196" rx="36" ry="40" fill="#eeb18a"/>
+    <path d="M105 184Q105 149 140 146Q168 144 181 181Q158 171 142 164Q130 185 105 184Z" fill="#5d403b"/>
+    <path d="M130 195Q134 190 138 195M152 195Q156 191 160 195" stroke="#68463f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M135 209Q145 216 156 209" stroke="#904f49" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+    <circle cx="117" cy="204" r="5" fill="#efa39a"/><circle cx="171" cy="204" r="5" fill="#efa39a"/>
+    <!-- right child -->
+    <path d="M282 283Q291 226 333 226Q374 227 385 283" fill="#dfa0b4"/>
+    <path d="M297 202Q293 162 322 154Q355 144 373 174Q386 195 374 221Z" fill="#9a694a"/>
+    <ellipse cx="335" cy="199" rx="36" ry="39" fill="#f0c297"/>
+    <path d="M298 192Q294 160 320 156Q349 147 370 181Q352 176 340 164Q331 182 298 192Z" fill="#986748"/>
+    <path d="M319 200Q323 197 327 200M341 200Q345 197 349 200" stroke="#744b40" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M325 213Q335 221 346 213" stroke="#904f49" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <circle cx="307" cy="208" r="5.5" fill="#eea995"/><circle cx="364" cy="208" r="5.5" fill="#eea995"/>
+    <path d="M300 174Q336 149 371 176" fill="none" stroke="#a99bd5" stroke-width="7" stroke-linecap="round"/>
+    <!-- illustrated bible resting in front -->
+    <g transform="translate(187 248)">
+      <path d="M-16 5Q10 -4 54 14Q95 -5 124 5V62Q90 46 54 65Q12 45 -16 62Z" fill="#bd8159"/>
+      <path d="M-9 0Q17 -8 54 11Q91 -9 118 0V55Q89 41 54 60Q18 42 -9 55Z" fill="#fff8e6" stroke="#c69c72" stroke-width="2"/>
+      <path d="M54 11V60" stroke="#d7b78b" stroke-width="2"/>
+      <path d="M5 16Q21 13 44 24M5 27Q23 24 44 35M5 38Q23 35 44 45M65 24Q85 13 106 16M65 35Q85 25 106 27" stroke="#e7cfab" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M84 18V43M74 28H94" stroke="#d9a35d" stroke-width="4" stroke-linecap="round"/>
+      <path d="M53 56L57 71L62 60" fill="#d67f79"/>
+    </g>
+    <!-- tiny notes/stars -->
+    <path d="M63 186l4-10 4 10 10 4-10 3-4 10-4-10-10-3Z" fill="#efbf74" opacity=".9"/>
+    <path d="M397 187l3-8 3 8 8 3-8 3-3 8-3-8-8-3Z" fill="#e5a2a0" opacity=".8"/>
+  </svg>
+  <footer class="bottom"><strong>With love, from Sunday School <span class="heart">♥</span></strong>Faith, joy and little hearts full of love</footer>
+</main>
+</body>
+</html>
